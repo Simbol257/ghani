@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+        </style>
+
+        <!-- CSS Reset -->
+        <style type="text/css">
+            /* 1. Use a more-intuitive box-sizing model */
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                font-family: "Space Grotesk";
+                scroll-behavior: smooth;
+            }
+
+            /* 2. Remove default margin */
+            * {
+                margin: 0;
+            }
+
+            body {
+                /* 4. Improve text rendering */
+                -webkit-font-smoothing: antialiased;
+            }
+
+            /* 5. Improve media defaults */
+            img,
+            picture,
+            video,
+            canvas,
+            svg {
+                display: block;
+                max-width: 100%;
+            }
+
+            /* 6. Inherit fonts for form controls */
+            input,
+            button,
+            textarea,
+            select {
+                font: inherit;
+            }
+
+            /* 8. Improve line wrapping */
+            p,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                text-wrap: pretty;
+            }
+
+            /*
+  9. Create a root stacking context
+  */
+            #root,
+            #__next {
+                isolation: isolate;
+            }
+        </style>
+    </head>
+    <body class="overflow-x-hidden">
+        <!-- Navigation -->
+        <section class="sticky top-0 bg-white z-40">
+            <nav class="flex justify-between items-center py-4 px-[4vw] border-b-2 border-gray-300 lg:border-0">
+                <div class="font-semibold text-xl lg:text-3xl">
+                    <a class="cursor-pointer" href="/">ghani</a>
+                </div>
+
+                <div class="hidden flex items-center gap-4 text-xl lg:flex">
+                    <a class="cursor-pointer" href="/">Home</a>
+                    <a class="cursor-pointer" href="#services">Services</a>
+                    <a class="cursor-pointer" href="#testimonials">Testimonials</a>
+                    <a class="cursor-pointer" href="#contact">Contact</a>
+                </div>
+
+                <a class="hidden py-2 px-4 rounded-full bg-[#142F32] text-white font-semibold lg:block" href="">Schedule Call</a>
+
+                <svg id="menu-btn" class="size-8 lg:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </nav>
+        </section>
+        <!-- Sidenavigation -->
+        <section id="sidenav" class="fixed top-0 left-[-100vw] bg-[#142F32] text-white w-screen h-screen transition-all duration-700 z-50">
+            <div class="flex justify-between items-center py-4 px-[4vw] border-b-2 lg:border-0">
+                <div class="font-semibold text-xl">
+                    <a class="cursor-pointer" href="/">ghani</a>
+                </div>
+                <svg id="close-btn" class="size-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </div>
+            <div class="w-screen py-4 px-[4vw]">
+                <div class="flex flex-col gap-8 text-3xl">
+                    <a href="/">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <a class="inline-block my-8 py-2 px-4 rounded-full bg-[#E3FFCC] text-[#142F32] font-semibold" href="">Schedule Call</a>
+            </div>
+        </section>
+        <!-- Hero -->
+        <section class="grid gap-4 px-[4vw] py-6">
+            <h1 class="text-4xl font-black">Words that convert. Stories that sell.</h1>
+            <p class="text-md text-gray-500">Crafting high-converting copy that connects, captivates, and compels your audience to take action. Let’s turn your vision into powerful results.</p>
+            <div class="grid gap-2">
+                <a class="cursor-pointer block text-center p-4 rounded-full bg-[#142F32] text-white font-semibold" href="">Schedule a Free Call</a>
+                <a class="cursor-pointer block text-center p-4 rounded-full text-[#142F32] font-semibold border-2 border-gray-300 flex justify-center items-center" href="">
+                    Testimonials
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </a>
+            </div>
+            <iframe
+                class="aspect-video w-full rounded-lg"
+                src="https://youtube.com/embed/rdSVxyXwoTQ"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            ></iframe>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="px-[4vw] py-6 bg-[#142F32] text-white">
+            <h2 class="my-4 text-xl uppercase text-gray-200">About Me</h2>
+            <h1 class="text-4xl capitalize text-center my-6">I Help Brands turn words into Results.</h1>
+            <div class="grid lg:grid-cols-2 items-center gap-6">
+                <img
+                    class="w-[80%] w-[50%] mx-auto rounded-lg"
+                    src="ghani.jpg"
+                />
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-1 gap-6 my-6">
+                <div>
+                    <p class="text-xl">Driven by Results</p>
+                    <p class="text-sm text-gray-500">I focus on creating copy that drives measurable outcomes and helps your business grow</p>
+                </div>
+
+                <div>
+                    <p class="text-xl">Words that sell</p>
+                    <p class="text-sm text-gray-500">Every word is carefully crafted to spark interest, build trust, and drive sales</p>
+                </div>
+
+                <div>
+                    <p class="text-xl">Storytelling that converts</p>
+                    <p class="text-sm text-gray-500">I use the power of storytelling to turn potential customers into loyal clients</p>
+                </div>
+
+                <div>
+                    <p class="text-xl">Your Vision,Amplified</p>
+                    <p class="text-sm text-gray-500">I bring your unique brand vision to life through words that resonate with your audience</p>
+                </div>
+
+                <div>
+                    <p class="text-xl">Persuasive and Engaging</p>
+                    <p class="text-sm text-gray-500">I craft compelling copy that captures attention and keeps your audience engaged</p>
+                </div>
+
+                <div>
+                    <p class="text-xl">Copy that Delivers</p>
+                    <p class="text-sm text-gray-500">My goal is simple: create copy that not only sounds good but also achieves your business objectives</p>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Pain points -->
+        <section class="px-[4vw] py-6 lg:grid lg:grid-cols-2 items-center">
+            <div>
+                <h1 class="text-2xl">Struggling to Connect with Your Audience? You’re Not Alone.</h1>
+                <ul class="p-4 grid gap-4">
+                    <li class="flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-red-400 flex-none">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                        Low Conversions – Your message isn’t turning visitors into paying customers
+                    </li>
+                    <li class="flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-red-400 flex-none">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                        Lack of Engagement – Your content fails to capture and maintain attention
+                    </li>
+                    <li class="flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-red-400 flex-none">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                        Unclear Messaging – Prospects don’t fully understand what you offer or why it matters.
+                    </li>
+                    <li class="flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-red-400 flex-none">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                        Wasted Ad Spend – You’re spending money on marketing that doesn’t yield results
+                    </li>
+                    <li class="flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-red-400 flex-none">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                        Stale Brand Voice – Your copy sounds outdated and doesn’t reflect your brand’s true value
+                    </li>
+                </ul>
+            </div>
+            <img class="w-[90%] mx-auto" src="https://img.freepik.com/free-vector/tired-man-sitting-floor-with-paper-document-piles-around-flat-illustration_74855-11145.jpg?t=st=1735365598~exp=1735369198~hmac=a094968e4eb3955ffa624c1d098f28988f7c10f44fae2eaeea6519a606f7fea6&w=740" />
+        </section>
+
+        <!-- Solutions -->
+        <section class="px-[4vw] py-6 lg:grid lg:grid-cols-2">
+            <div>
+                <h3 class="text-2xl">Compelling Copy That Converts — The Solution You Need</h3>
+                <p class="p-4">
+                    I craft clear, persuasive copy that speaks directly to your ideal audience. By understanding your business and goals, I ensure every word resonates with those who matter most, turning casual visitors into loyal customers.
+                    <br />
+                    <br />
+					With a focus on storytelling and emotion, I connect your brand’s message to your audience’s needs, desires, and pain points. This creates a lasting impact that builds trust and encourages action, all while reinforcing your brand’s unique voice.
+					<br />
+                    <br />
+					By optimizing your copy for both clarity and conversion, I transform your marketing efforts into measurable results. Whether through website content, email sequences, or ad copy, I ensure every piece aligns with your goals and delivers real value.
+							
+                </p>
+            </div>
+            <img class="lg:order-first w-[90%] mx-auto" src="https://img.freepik.com/free-vector/holding-arrow-concept-illustration_114360-8866.jpg?t=st=1735365749~exp=1735369349~hmac=4d9a3985276a07af4e11eb370d82123fe97a67b96dd4300026204647f77c96f7&w=740" />
+        </section>
+
+        <!-- Why Work with Us -->
+        <section id="services" class="px-[4vw] py-6 bg-[#142F32] text-white">
+            <h1 class="text-2xl capitalize">Why work with us</h1>
+            <div class="grid lg:grid-cols-3 gap-12 my-6 px-4">
+                <div class="flex flex-col items-center gap-2">
+                    <img
+                        class="w-[80%] rounded-lg"
+                        src="https://img.freepik.com/free-vector/reputation-management-user-feedback-customer-loyalty-client-satisfaction-meter-positive-review-company-trust-five-star-quality-evaluation-system_335657-2691.jpg?t=st=1735365982~exp=1735369582~hmac=8cfdbd5afea5e28447e9510138be7ff3cea16b3456f30c120b8192be40ca5616&w=740"
+                    />
+                    <h2 class="text-xl font-bold">Proven Results</h2>
+                    <p class="text-sm text-center">My copy isn’t just creative — it drives measurable business growth</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <img
+                        class="w-[80%] rounded-lg"
+                        src="https://img.freepik.com/free-vector/personal-site-concept-illustration_114360-3417.jpg?t=st=1731120607~exp=1731124207~hmac=3361293d1242a9c95f6323c65c5b4278ecc6e089ce0fcbd5221e598dd026dc16&w=740"
+                    />
+                    <h2 class="text-xl font-bold">Tailored Strategy</h2>
+                    <p class="text-sm text-center">I create customized solutions that align perfectly with your brand and objectives</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <img
+                        class="w-[80%] rounded-lg"
+                        src="https://img.freepik.com/free-vector/esport-fans-abstract-concept-illustration_335657-3856.jpg?t=st=1735366214~exp=1735369814~hmac=23fd4509a4d547a28dd82a9166fb3214bbf50470ccc3c6aaf01aee97c1ab3ff3&w=740"
+                    />
+                    <h2 class="text-xl font-bold">Engaging Content</h2>
+                    <p class="text-sm text-center">I write compelling copy that grabs attention and keeps your audience coming back</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Works -->
+        <section class="px-[4vw] py-6">
+            <h1 class="text-4xl">How It Works</h1>
+            <div class="p-4 grid gap-4">
+                <div class="grid gap-2">
+                    <h2 class="text-xl lg:text-3xl">1.Book a Free Consultation Call</h2>
+                    <p class="text-gray-700 lg:text-xl">We’ll start with a 30-minute call to discuss your goals, challenges, and vision. This helps me understand your brand and tailor the perfect strategy for you.</p>
+                </div>
+                <div class="grid gap-2">
+                    <h2 class="text-xl lg:text-3xl">2.Collaborate on Strategy</h2>
+                    <p class="text-gray-700 lg:text-xl">After our call, I’ll create a personalized plan for your project, focusing on your unique needs and objectives. We’ll refine the details together to ensure everything is aligned.</p>
+                </div>
+                <div class="grid gap-2">
+                    <h2 class="text-xl lg:text-3xl">3.Receive High Converting Copy</h2>
+                    <p class="text-gray-700 lg:text-xl">Once we’re on the same page, I’ll get to work crafting your copy. You’ll receive compelling, results-driven content designed to engage your audience and drive conversions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="px-[4vw] py-6 w-[100vw] bg-[#142F32] overflow-hidden">
+            <h1 class="text-4xl text-white">Testimonials</h1>
+            <div class="w-[100%] overflow-auto my-8 snap-x flex lg:justify-center lg:flex-wrap lg:gap-4">
+                <div class="p-4 w-[80vw]  lg:w-[25vw] snap-center shrink-0 rounded-lg mx-2 bg-[#D8EFED] grid gap-2">
+                    <h1 class="text-2xl">"Transformed my Brand Voice"</h1>
+                    <p class="text-sm">Working with this copywriter completely revamped my brand's message. The words now resonate with my audience and reflect my true values.</p>
+                    <div class="flex gap-2">
+                        <img class="size-12 bg-white rounded-full" src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Images.png" />
+                        <div class="flex flex-col items-start">
+                            <p>Rachel Adams</p>
+                            <div class="text-amber-300 flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 w-[80vw] lg:w-[25vw] snap-center shrink-0 rounded-lg mx-2 bg-[#D8EFED] grid gap-">
+                    <h1 class="text-2xl">"Boosted Engagement"</h1>
+                    <p class="text-sm">The copy was spot on! It captured my brand's essence and boosted engagement across all platforms. I’ve seen a noticeable increase in conversions.</p>
+                    <div class="flex gap-2">
+                        <img class="size-12 bg-white rounded-full" src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Images.png" />
+                        <div class="flex flex-col items-start">
+                            <p>Tom Harper</p>
+                            <div class="text-amber-300 flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 w-[80vw] lg:w-[25vw] snap-center shrink-0 rounded-lg mx-2 bg-[#D8EFED] grid gap-2">
+                    <h1 class="text-2xl">"Incredible Attentionto Detail"</h1>
+                    <p class="text-sm">The attention to detail was incredible. This copywriter took the time to truly understand my business, delivering compelling copy that connected with my audience.</p>
+                    <div class="flex gap-2">
+                        <img class="size-12 bg-white rounded-full" src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Images.png" />
+                        <div class="flex flex-col items-start">
+                            <p>Emily Scott</p>
+                            <div class="text-amber-300 flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 w-[80vw] lg:w-[25vw] snap-center shrink-0 rounded-lg mx-2 bg-[#D8EFED] grid gap-2">
+                    <h1 class="text-2xl">"Copy That Converts"</h1>
+                    <p class="text-sm">The copy not only sounds great, it works. It’s clear, persuasive, and has significantly increased my sales. I couldn’t be happier with the results.</p>
+                    <div class="flex gap-2">
+                        <img class="size-12 bg-white rounded-full" src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Images.png" />
+                        <div class="flex flex-col items-start">
+                            <p>James Mitchell</p>
+                            <div class="text-amber-300 flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 w-[80vw] lg:w-[25vw] snap-center shrink-0 rounded-lg mx-2 mr-6 bg-[#D8EFED] grid gap-2">
+                    <h1 class="text-2xl">"Expertly Crafted Messaging"</h1>
+                    <p class="text-sm">The messaging was perfect from the start. This copywriter brought a fresh perspective and delivered content that felt authentic and compelling.</p>
+                    <div class="flex gap-2">
+                        <img class="size-12 bg-white rounded-full" src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Images.png" />
+                        <div class="flex flex-col items-start">
+                            <p>Laura Barnes</p>
+                            <div class="text-amber-300 flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+		<section class="w-[100vw] h-min aspect-[9/16]"> 
+		<!-- Calendly inline widget begin -->
+		<div class="calendly-inline-widget" data-url="https://calendly.com/thakuripratik257/ghani-s-free-consultation-call" style="width:100%;height:100%;"></div>
+		<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+		<!-- Calendly inline widget end -->
+		</section>
+		
+		
+		<footer class="bg-[#142F32] text-white px-[4vw] py-6 grid lg:grid-cols-2">
+			<div class="flex flex-col">
+				<h1 class="text-2xl">Navigation</h1>
+				<div class="flex flex-col gap-4 p-4">
+					<a class="cursor-pointer" href="/" >Home</a>
+					<a class="cursor-pointer" href="#services" >Services</a>
+					<a class="cursor-pointer" href="#testimonials" >Testimonials</a>
+					<a class="cursor-pointer" href="#contact" >Contact</a>
+				</div>
+			</div>
+			<div id="contact" class="flex flex-col">
+				<h1 class="text-2xl">Socials</h1>
+				<div class="flex flex-col gap-4 p-4">
+					<a class="cursor-pointer" href="https://youtube.com/" >Youtube</a>
+					<a class="cursor-pointer" href="https://t.me/" >Telegram</a>
+					<a class="cursor-pointer" href="https://www.instagram.com/ghani_k25?igsh=MTkxajl0Z3VoZmd4dA==" >Instagram</a>
+				</div>
+			</div>
+		</footer>
+
+        <script type="text/javascript">
+            var menuBtn = document.getElementById("menu-btn");
+            var closeBtn = document.getElementById("close-btn");
+            var sidenav = document.getElementById("sidenav");
+            menuBtn.addEventListener("click", function () {
+                sidenav.style.left = 0;
+            });
+            closeBtn.addEventListener("click", function () {
+                sidenav.style.left = "-100vw";
+            });
+        </script>
+    </body>
+</html>
